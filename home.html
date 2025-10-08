@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asian Mix — школьная презентация (9 класс)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root{--bg:#f6f7fb;--card:#ffffff;--line:#e7e9f3;--text:#0b1220;--muted:#465569;--accent:#7c3aed;--accent2:#06b6d4;--ring:rgba(124,58,237,.22)}
+    html,body{background:var(--bg);color:var(--text);font-family:'Manrope',system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    .container{max-width:72rem;margin:0 auto}
+    .glass{background:var(--card);border:1px solid var(--line);box-shadow:0 16px 40px rgba(11,18,32,.08);border-radius:24px}
+    .btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-radius:999px;padding:12px 18px;font-weight:800;box-shadow:0 10px 28px rgba(124,58,237,.22);border:1px solid rgba(255,255,255,.35)}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(124,58,237,.3)}
+    .logo{letter-spacing:.24em}
+    .section{scroll-margin-top:88px}
+    /* декоративные разделители */
+    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,.35),transparent)}
+    .badge{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .6rem;border-radius:999px;font-size:.75rem;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.25)}
+    .step{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .7rem;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:700}
+    .shine{position:relative;overflow:hidden}
+    .shine:after{content:"";position:absolute;inset:-200% -50% auto;transform:rotate(20deg);height:200%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.16),transparent)}
+    .shine:hover:after{animation:shine 1.2s ease}
+    @keyframes shine{from{left:-120%}to{left:120%}}
+  </style>
+</head>
+<body class="font-sans">
+  <!-- NAVBAR -->
+  <nav class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
+    <div class="container px-6 py-4 flex items-center justify-between">
+      <div class="font-black text-xl logo">ASIAN MIX • SCHOOL EDITION</div>
+      <div class="hidden md:flex gap-6 text-sm">
+        <a href="#concept" class="hover:opacity-80">Концепт & Теория</a>
+        <a href="#idea" class="hover:opacity-80">Наша идея & Фото</a>
+        <a href="#materials" class="hover:opacity-80">Состав штор</a>
+        <a href="#voices" class="hover:opacity-80">Голоса людей</a>
+        <a href="#sources" class="hover:opacity-80">Источники</a>
+      </div>
+      <a href="#voices" class="btn text-sm">Смотреть опросы</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="relative pt-28 md:pt-32" style="background:radial-gradient(1000px 380px at 20% 0%, rgba(124,58,237,.08), transparent 55%), radial-gradient(1000px 380px at 80% 0%, rgba(6,182,212,.08), transparent 55%);">
+    <div class="container px-6 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[.22em] text-indigo-500">Школьная презентация (9 класс)</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mt-2">Asian Mix — японские и корейские шторы как идея для Tahit Decor</h1>
+        <p class="mt-4 text-lg" style="color:var(--muted)">Покажу простыми словами: зачем это нужно, как выглядит идея, из чего делаем шторы и что говорят опросы.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#concept" class="btn">Начать</a>
+          <a href="#idea" class="btn" style="background:linear-gradient(135deg,var(--accent2),var(--accent))">Смотреть визуал</a>
+        </div>
+        <div class="flex gap-2 mt-6">
+          <span class="badge">минимализм</span>
+          <span class="badge">натуральные ткани</span>
+          <span class="badge">мягкий свет</span>
+        </div>
+      </div>
+      <figure class="glass rounded-3xl overflow-hidden shine">
+        <!-- Положи файл ./images/hero.jpg рядом с index.html -->
+        <img alt="" class="w-full h-full object-cover" src="./images/hero.jpg"/>
+      </figure>
+    </div>
+    <div class="divider container mt-10"></div>
+  </header>
+
+  <!-- 1. Концепт и теория -->
+  <section id="concept" class="section container px-6 py-14">
+    <div class="grid lg:grid-cols-2 gap-8 items-start">
+      <div class="glass p-8">
+        <h2 class="text-3xl font-extrabold">1) Концепт «Asian Mix» + короткая теория</h2>
+        <p class="mt-3" style="color:var(--muted)">Добавляем к Tahit Decor спокойные азиатские направления и сохраняем KZ Heritage. Почему это важно: людям нравятся простые формы, натуральные ткани и мягкий свет.</p>
+        <div class="grid md:grid-cols-2 gap-4 mt-6">
+          <div class="glass p-5"><div class="step">1</div><h4 class="font-semibold mt-2">KZ Heritage</h4><p class="text-sm mt-1" style="color:var(--muted)">Современный орнамент, мягкие цвета.</p></div>
+          <div class="glass p-5"><div class="step">2</div><h4 class="font-semibold mt-2">Japandi Calm</h4><p class="text-sm mt-1" style="color:var(--muted)">Лён, панели шодзи, норэн.</p></div>
+          <div class="glass p-5"><div class="step">3</div><h4 class="font-semibold mt-2">K‑Minimal</h4><p class="text-sm mt-1" style="color:var(--muted)">Чистые линии, пастель.</p></div>
+          <div class="glass p-5"><div class="step">4</div><h4 class="font-semibold mt-2">Zen Texture</h4><p class="text-sm mt-1" style="color:var(--muted)">Джут, рами, бамбук.</p></div>
+        </div>
+      </div>
+      <div class="glass p-8">
+        <h3 class="text-2xl font-semibold">Зачем это Tahit Decor</h3>
+        <ul class="list-disc pl-6 mt-3 space-y-2 text-lg">
+          <li><b>Тренд на спокойные дома.</b> Минимализм и светлые ткани — в моде.</li>
+          <li><b>Больше выбора для покупателей.</b> Японское/корейское + KZ Heritage.</li>
+          <li><b>Широкая линейка.</b> Шторы‑панели, норэн, римские, рулонные.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Наша идея и фото -->
+  <section id="idea" class="section container px-6 py-8">
+    <div class="glass p-8">
+      <h2 class="text-3xl font-extrabold">2) Наша идея & Фото</h2>
+      <p class="mt-2" style="color:var(--muted)">Показываем визуалы, как это выглядит в жизни. <span class="badge">*Важно:* положи свои изображения в <code>./images/</code> и замени имена файлов в <code>src</code>.</span></p>
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
+        <figure class="rounded-2xl overflow-hidden glass shine">
+          <!-- Положи файл ./images/room.jpg -->
+          <img class="w-full h-full object-cover" alt="Интерьер Japandi" src="./images/room.jpg"/>
+        </figure>
+        <figure class="rounded-2xl overflow-hidden glass shine">
+          <!-- Положи файл ./images/linen.jpg -->
+          <img class="w-full h-full object-cover" alt="Текстура лён seigaiha" src="./images/linen.jpg"/>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Материалы -->
+  <section id="materials" class="section container px-6 py-12">
+    <div class="grid lg:grid-cols-3 gap-8 items-start">
+      <div class="glass p-8">
+        <h2 class="text-3xl font-extrabold">3) Состав штор (материалы)</h2>
+        <ul class="list-disc pl-6 mt-4 space-y-3 text-lg">
+          <li><b>Лён 160–240 г/м²</b> — натуральный, рассеивает 45–65% света. Усадка до 3%.</li>
+          <li><b>Хлопок / полулён</b> — мягкий, 35–55% света. Уход простой.</li>
+          <li><b>Джут / рами / бамбук</b> — тёплая фактура для рулонных/панелей.</li>
+          <li><b>ПЭТ‑рецайкл</b> — прочный, моющийся. Есть blackout 95–100%.</li>
+          <li><b>Панели «шодзи»</b> — эффект рисовой бумаги из ткани.</li>
+        </ul>
+        <div class="grid grid-cols-2 gap-3 text-xs opacity-80 mt-6">
+          <div class="glass p-3">OEKO‑TEX® 100</div>
+          <div class="glass p-3">Гарантия 12 мес.</div>
+          <div class="glass p-3">Норэн, римские, рулонные</div>
+          <div class="glass p-3">Люверсы, лента, профиль</div>
+        </div>
+      </div>
+      <figure class="glass rounded-3xl overflow-hidden lg:col-span-2 shine">
+        <!-- Положи файл ./images/materials.jpg (необязательно) -->
+        <img alt="Материалы" class="w-full h-full object-cover" src="./images/materials.jpg"/>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4. Голоса людей (опросы и тренды) -->
+  <section id="voices" class="section container px-6 py-16">
+    <div class="glass p-8">
+      <h2 class="text-3xl font-extrabold">4) Голоса людей (опросы и тренды)</h2>
+      <p class="mt-2" style="color:var(--muted)">Открытые источники показывают, что людям нравятся японские и спокойные интерьеры.</p>
+      <div class="grid md:grid-cols-2 gap-8 mt-8">
+        <div>
+          <h4 class="font-semibold mb-3">Houzz (рост запросов, % год к году)</h4>
+          <canvas id="houzzBar" height="220"></canvas>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Pinterest (рост интереса, %)</h4>
+          <canvas id="pinBar" height="220"></canvas>
+        </div>
+      </div>
+      <div class="mt-10 glass p-6">
+        <h4 class="font-semibold">Итоговая картинка</h4>
+        <canvas id="mixDonut" class="mt-4" height="220"></canvas>
+        <p class="text-xs opacity-70 mt-2">Инфографика: больше всего внимания — Japandi/японское; далее — корейский минимализм и другие азиатские; казахский стиль — нишевый, но важный.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Источники -->
+  <section id="sources" class="section container px-6 py-12 mb-20">
+    <div class="glass p-8">
+      <h2 class="text-3xl font-extrabold">5) Источники (опросы и тренды)</h2>
+      <ul class="list-disc pl-6 mt-4 space-y-2 text-blue-700 text-sm">
+        <li><a target="_blank" rel="noopener" href="https://st.hzcdn.com/static/econ/2024_Houzz_Emerging_Summer_Trends.pdf">Houzz — Emerging Summer Trends 2024 (PDF)</a></li>
+        <li><a target="_blank" rel="noopener" href="https://www.houzz.com/magazine/2024-houzz-u-s-emerging-summer-trends-report-stsetivw-vs~176011798">Houzz — статья с выводами</a></li>
+        <li><a target="_blank" rel="noopener" href="https://newsroom.pinterest.com/news/the-pinterest-fall-2024-trend-report/">Pinterest — Fall Trend Report 2024</a></li>
+        <li><a target="_blank" rel="noopener" href="https://lifeathome.ikea.com/">IKEA — Life at Home 2024</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="border-t border-gray-200 py-10 text-center">
+    <div class="text-sm opacity-70">© School Edition. Концепция «Asian Mix» подготовлена для школьной презентации.</div>
+  </footer>
+
+  <script>
+    // GSAP enter animations
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.glass').forEach((el,i)=>{
+      gsap.from(el,{opacity:0, y:26, duration:.9, ease:'power3.out', delay:i*.06,
+        scrollTrigger:{trigger:el,start:'top 85%'}})
+    })
+  </script>
+  <script>
+    // Charts (внешние источники)
+    new Chart(document.getElementById('houzzBar'),{
+      type:'bar',
+      data:{labels:['Japandi living room','Wabi-sabi','Japanese kitchen','Japanese bedroom'],
+        datasets:[{label:'Рост поисков, % (YoY)', data:[48,44,33,25]}]},
+      options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}
+    });
+    new Chart(document.getElementById('pinBar'),{
+      type:'bar',
+      data:{labels:['Zen bathroom','Zen house'], datasets:[{label:'Рост интереса, %', data:[200,405]}]},
+      options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}
+    });
+    new Chart(document.getElementById('mixDonut'),{
+      type:'doughnut',
+      data:{labels:['Japandi / Япония','K‑Minimal / Корея','Другие азиатские','Казахский стиль'],
+        datasets:[{label:'Доля внимания (инфографика)', data:[60,20,15,5]}]},
+      options:{plugins:{legend:{position:'bottom'}}}
+    });
+  </script>
+</body>
+</html>
