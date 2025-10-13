@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Asian Mix — Школьная презентация</title>
+  <title>Asian Mix — Школьная презентация (Proficient)</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
@@ -14,17 +14,29 @@
     .btn:hover {transform: scale(1.05);}
     h1, h2 {font-weight: 800;}
     .section {scroll-margin-top: 80px;}
+    .badge{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.25)}
+    /* Compare slider */
+    .compare{position:relative;max-width:100%;aspect-ratio:16/9;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+    .compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .compare .top{clip-path:inset(0 50% 0 0)}
+    .compare input[type=range]{position:absolute;inset:auto 0 12px 0;width:60%;margin:0 auto;display:block}
+    .compare .handle{position:absolute;inset:0;pointer-events:none;border-right:2px solid rgba(255,255,255,.9)}
+    /* Speaker notes */
+    details.note{margin-top:10px}
+    details.note summary{cursor:pointer;color:#475569}
   </style>
 </head>
 <body>
   <nav class="fixed top-0 left-0 right-0 bg-white shadow z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="font-black text-xl tracking-widest text-indigo-600">ASIAN MIX</div>
+      <div class="font-black text-xl tracking-widest text-indigo-600">ASIAN MIX • PROFICIENT</div>
       <div class="hidden md:flex gap-6 text-sm">
         <a href="#concept" class="hover:text-indigo-600">Концепт</a>
         <a href="#idea" class="hover:text-indigo-600">Наша идея</a>
+        <a href="#compare" class="hover:text-indigo-600">Сравнение</a>
         <a href="#materials" class="hover:text-indigo-600">Состав</a>
         <a href="#voices" class="hover:text-indigo-600">Опросы</a>
+        <a href="#research" class="hover:text-indigo-600">Исследования</a>
         <a href="#sources" class="hover:text-indigo-600">Источники</a>
       </div>
       <a href="#voices" class="btn text-sm">Смотреть опросы</a>
@@ -47,21 +59,35 @@
   </header>
 
   <section id="concept" class="section max-w-6xl mx-auto px-6 py-12">
-    <div class="glass p-8">
-      <h2 class="text-3xl mb-4">1. Концепт «Asian Mix»</h2>
-      <p class="text-gray-700 text-lg">Идея в том, чтобы добавить к Tahit Decor спокойные восточные направления — Japandi, Wabi-sabi и корейский минимализм. Сейчас людям нравятся натуральные материалы и мягкий свет.</p>
-      <ul class="list-disc pl-6 mt-4 space-y-2 text-gray-600">
-        <li>Japandi Calm — лён, панели шодзи, минимализм.</li>
-        <li>K‑Minimal — чистые линии, пастельные цвета.</li>
-        <li>Zen Texture — бамбук, джут, рами.</li>
-      </ul>
+    <div class="grid lg:grid-cols-2 gap-8 items-start">
+      <div class="glass p-8">
+        <h2 class="text-3xl mb-4">1. Концепт «Asian Mix»</h2>
+        <p class="text-gray-700 text-lg">Добавляем к Tahit Decor спокойные восточные направления — Japandi, Wabi-sabi и корейский минимализм — сохраняя KZ Heritage. Людям нравятся натуральные материалы и мягкий свет.</p>
+        <ul class="list-disc pl-6 mt-4 space-y-2 text-gray-600">
+          <li>Japandi Calm — лён, панели шодзи, минимализм.</li>
+          <li>K‑Minimal — чистые линии, пастельные тона.</li>
+          <li>Zen Texture — бамбук, джут, рами.</li>
+        </ul>
+        <details class="note"><summary>🎤 Подсказки к речи</summary>
+          <p class="mt-2 text-sm text-gray-600">Сначала коротко объясняю тренд, затем показываю варианты коллекции, потом — доказательства (опросы и графики).</p>
+        </details>
+      </div>
+      <div class="glass p-8">
+        <h3 class="text-2xl font-semibold">Big Ideas (для рубрики Proficient)</h3>
+        <ul class="list-disc pl-6 mt-3 space-y-2">
+          <li><b>Decision‑making:</b> почему выбираем именно Japandi/K‑Minimal (спрос и совместимость с KZ).</li>
+          <li><b>Experimental design:</b> пилот в 3 салонах + сбор отзывов.</li>
+          <li><b>Data analysis:</b> сравнение долей интереса по источникам.</li>
+          <li><b>Performance:</b> метрики — конверсия просмотра → заказ, NPS.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section id="idea" class="section max-w-6xl mx-auto px-6 py-12">
     <div class="glass p-8">
       <h2 class="text-3xl mb-4">2. Наша идея и фото</h2>
-      <p class="text-gray-700 text-lg">Мы сделали визуализацию, как могут выглядеть шторы Tahit Decor в японском стиле:</p>
+      <p class="text-gray-700 text-lg">Визуализация, как это выглядит в интерьере и вблизи ткани.</p>
       <div class="grid md:grid-cols-2 gap-6 mt-6">
         <figure class="rounded-2xl overflow-hidden glass">
           <img src="./123.png" alt="Интерьер с японскими шторами" class="w-full h-full object-cover">
@@ -70,6 +96,24 @@
           <img src="./1234.png" alt="Ткань лён seigaiha" class="w-full h-full object-cover">
         </figure>
       </div>
+      <details class="note"><summary>🎤 Подсказки к речи</summary>
+        <p class="mt-2 text-sm text-gray-600">Скажи, что фото — концепты стиля, а реальные ткани можно подобрать под бюджет: лён, полулён, blackout.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="compare" class="section max-w-6xl mx-auto px-6 py-12">
+    <div class="glass p-8">
+      <h2 class="text-3xl mb-4">2.1 Интерактив: сравнение вида</h2>
+      <div class="compare mt-4" id="cmp">
+        <img src="./1234.png" alt="Ткань" class="bottom">
+        <img src="./123.png" alt="Интерьер" class="top" id="cmpTop">
+        <div class="handle" id="cmpHandle"></div>
+        <input type="range" id="cmpRange" min="0" max="100" value="50">
+      </div>
+      <details class="note"><summary>🎤 Подсказки</summary>
+        <p class="mt-2 text-sm text-gray-600">Покажи слайдером, как ткань влияет на интерьер: двигай ползунок.</p>
+      </details>
     </div>
   </section>
 
@@ -77,25 +121,64 @@
     <div class="glass p-8">
       <h2 class="text-3xl mb-4">3. Состав штор (материалы)</h2>
       <ul class="list-disc pl-6 mt-4 space-y-2 text-gray-700 text-lg">
-        <li>Лён 160–240 г/м² — натуральный, рассеивает свет, приятный на ощупь.</li>
+        <li>Лён 160–240 г/м² — натуральный, рассеивает свет; усадка до 3%.</li>
         <li>Хлопок / полулён — мягкий, удобен в уходе.</li>
-        <li>Джут / рами / бамбук — тёплая текстура и восточный стиль.</li>
-        <li>ПЭТ‑рецайкл — плотный, моющийся материал с blackout-эффектом.</li>
+        <li>Джут / рами / бамбук — тёплая текстура для панелей.</li>
+        <li>ПЭТ‑рецайкл — плотный, моющийся, есть blackout 95–100%.</li>
       </ul>
     </div>
   </section>
 
   <section id="voices" class="section max-w-6xl mx-auto px-6 py-12">
     <div class="glass p-8">
-      <h2 class="text-3xl mb-4">4. Опросы и тренды</h2>
-      <p class="text-gray-700 text-lg">Опросы Houzz и Pinterest показывают, что людям больше нравятся японские и корейские стили, чем чисто национальные.</p>
-      <canvas id="mixChart" height="220" class="mt-6"></canvas>
+      <h2 class="text-3xl mb-4">4. Опросы и тренды (интерактив)</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-semibold">Распределение предпочтений (демо‑опрос)</h4>
+          <canvas id="shareChart" height="220" class="mt-3"></canvas>
+          <form id="poll" class="mt-4 grid grid-cols-2 gap-2 text-sm">
+            <label class="glass p-2 flex items-center gap-2"><input type="radio" name="style" value="japandi" checked> Japandi / Япония</label>
+            <label class="glass p-2 flex items-center gap-2"><input type="radio" name="style" value="kminimal"> K‑Minimal / Корея</label>
+            <label class="glass p-2 flex items-center gap-2"><input type="radio" name="style" value="otherasia"> Другие азиатские</label>
+            <label class="glass p-2 flex items-center gap-2"><input type="radio" name="style" value="kazakh"> Казахский стиль</label>
+            <button class="btn col-span-2 mt-2" type="submit">Голосовать</button>
+          </form>
+        </div>
+        <div>
+          <h4 class="font-semibold">Рост интереса по источникам</h4>
+          <canvas id="houzzBar" height="110" class="mt-3"></canvas>
+          <canvas id="pinBar" height="110" class="mt-6"></canvas>
+        </div>
+      </div>
+      <details class="note"><summary>🎤 Как объяснить анализ</summary>
+        <p class="mt-2 text-sm text-gray-600">Скажи, что это демо‑опрос класса (данные локальные). Реальные тренды берём из Houzz/Pinterest — цифры на графиках справа.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="research" class="section max-w-6xl mx-auto px-6 py-12">
+    <div class="glass p-8">
+      <h2 class="text-3xl mb-4">5. Ресерч и примеры</h2>
+      <div class="grid md:grid-cols-3 gap-4 text-sm">
+        <div class="glass p-4">
+          <div class="badge">Case</div>
+          <p class="mt-2">Houzz: рост запросов Japandi/Wabi‑sabi год к году.</p>
+        </div>
+        <div class="glass p-4">
+          <div class="badge">Insight</div>
+          <p class="mt-2">Pinterest: высокий интерес к «zen» темам (дом/ванная).</p>
+        </div>
+        <div class="glass p-4">
+          <div class="badge">People</div>
+          <p class="mt-2">IKEA: люди хотят «спокойный дом», меньше визуального шума.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="sources" class="section max-w-6xl mx-auto px-6 py-12 mb-16">
     <div class="glass p-8">
-      <h2 class="text-3xl mb-4">5. Источники</h2>
+      <h2 class="text-3xl mb-4">6. Источники</h2>
       <ul class="list-disc pl-6 text-blue-700">
         <li><a href="https://www.houzz.com/magazine/2024-houzz-u-s-emerging-summer-trends-report-stsetivw-vs~176011798" target="_blank">Houzz — Summer Trends 2024</a></li>
         <li><a href="https://newsroom.pinterest.com/news/the-pinterest-fall-2024-trend-report/" target="_blank">Pinterest — Fall Trend Report 2024</a></li>
@@ -107,17 +190,50 @@
   <footer class="text-center py-8 text-gray-500 border-t">© 2025 School Edition — Проект Asian Mix для Tahit Decor</footer>
 
   <script>
-    new Chart(document.getElementById('mixChart'), {
+    // Charts и интерактив, локальное демо‑голосование
+    const defaultVotes = {japandi: 62, kminimal: 20, otherasia: 13, kazakh: 5};
+    const key = 'tahit_poll_v2';
+    const votes = JSON.parse(localStorage.getItem(key) || JSON.stringify(defaultVotes));
+
+    const shareChart = new Chart(document.getElementById('shareChart'), {
       type: 'doughnut',
-      data: {
-        labels: ['Japandi / Япония', 'K‑Minimal / Корея', 'Другие азиатские', 'Казахский стиль'],
-        datasets: [{
-          data: [60, 20, 15, 5],
-          backgroundColor: ['#7c3aed', '#06b6d4', '#94a3b8', '#cbd5e1']
-        }]
-      },
-      options: {plugins:{legend:{position:'bottom'}}}
+      data: {labels:['Japandi / Япония','K‑Minimal / Корея','Другие азиатские','Казахский стиль'],
+        datasets:[{data:[votes.japandi, votes.kminimal, votes.otherasia, votes.kazakh]}]},
+      options:{plugins:{legend:{position:'bottom'}}}
     });
+
+    document.getElementById('poll').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const choice = new FormData(e.target).get('style');
+      votes[choice] = (votes[choice]||0)+1;
+      localStorage.setItem(key, JSON.stringify(votes));
+      shareChart.data.datasets[0].data = [votes.japandi, votes.kminimal, votes.otherasia, votes.kazakh];
+      shareChart.update();
+    });
+
+    new Chart(document.getElementById('houzzBar'),{
+      type:'bar',
+      data:{labels:['Japandi living room','Wabi-sabi','Japanese kitchen','Japanese bedroom'],
+        datasets:[{label:'Рост поисков, % (YoY)', data:[48,44,33,25]}]},
+      options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}
+    });
+    new Chart(document.getElementById('pinBar'),{
+      type:'bar',
+      data:{labels:['Zen bathroom','Zen house'], datasets:[{label:'Рост интереса, %', data:[200,405]}]},
+      options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}
+    });
+
+    // Compare slider logic
+    const range = document.getElementById('cmpRange');
+    const topImg = document.getElementById('cmpTop');
+    const handle = document.getElementById('cmpHandle');
+    function updateClip(){
+      const val = range.value; // 0..100
+      topImg.style.clipPath = `inset(0 ${100-val}% 0 0)`;
+      handle.style.left = `calc(${val}% - 1px)`;
+    }
+    range.addEventListener('input', updateClip);
+    updateClip();
   </script>
 </body>
 </html>
